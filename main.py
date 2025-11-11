@@ -4,18 +4,18 @@ from pygame import mixer
 import random
 
 
-# === Константы: общие ===
+#Константы: общие
 WINDOW_WIDTH = 801
 WINDOW_HEIGHT = 801
 
-# === Константы: генерация ключа ===
+# Константы: генерация ключа
 ALPHABET_SIZE = 26
 BLOCK_LENGTH = 4
 MIN_SUM = 0 + 1 + 2 + 3          # = 6
 MAX_SUM = 22 + 23 + 24 + 25      # = 94
 MAX_GENERATION_ATTEMPTS = 10000
 
-# === Константы: интерфейс ===
+#Константы: интерфейс
 ENTRY_WIDTH = 10
 TEXT_FONT = ("Arial", 12)
 
@@ -27,7 +27,7 @@ GIF_CENTER_X, GIF_CENTER_Y = 500, 250
 BUTTON_GIF_X, BUTTON_GIF_Y = 60, 250
 BUTTON_GEN_X, BUTTON_GEN_Y = 60, 280
 
-# === Константы: анимация ===
+# Константы: анимация
 GIF_FRAME_COUNT = 41
 GIF_UPDATE_INTERVAL_MS = 100
 
@@ -112,7 +112,7 @@ def click_button():
     )
 
 
-# === Инициализация GUI ===
+# Инициализация GUI
 window = tk.Tk()
 window.title('lab3')
 window.geometry(f'{WINDOW_WIDTH}x{WINDOW_HEIGHT}')
@@ -151,5 +151,6 @@ try:
     mixer.music.play(-1)
 except Exception:
     pass  # файл отсутствует — игнорируем
+
 
 window.mainloop()
